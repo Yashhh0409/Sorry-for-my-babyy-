@@ -619,6 +619,95 @@ box-shadow:0 10px 30px rgba(0,0,0,.2);
   max-height:300px;
 overflow-y:auto;
 }
+  /* ===== PAGE 4 ===== */
+
+.memoryPage{
+
+min-height:100vh;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(135deg,#ff758c,#ff7eb3,#fad0c4);
+
+position:relative;
+overflow:hidden;
+
+}
+
+.memoryPage::before{
+
+content:"❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+
+position:absolute;
+top:-50px;
+left:0;
+width:100%;
+
+font-size:35px;
+
+word-spacing:70px;
+
+animation:loveRain 8s linear infinite;
+
+opacity:.6;
+
+}
+
+.memoryPhoto{
+
+width:280px;
+border-radius:25px;
+
+box-shadow:0 0 35px rgba(255,255,255,.8);
+
+animation:float 3s ease-in-out infinite;
+
+z-index:2;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+.nextBtn{
+
+margin-top:40px;
+
+padding:15px 35px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff4d6d;
+
+color:white;
+
+cursor:pointer;
+
+box-shadow:0 0 20px #ff4d6d;
+
+z-index:2;
+
+}
 </style>
 </head>
 
@@ -781,6 +870,23 @@ Yash 💖
 </p>
 
 </div>
+
+<button id="secretBtn" class="nextBtn">
+One Last Surprise ❤️
+</button>
+
+</div>
+document.getElementById("secretBtn").onclick = ()=>{
+
+document.body.innerHTML = `
+
+<div class="memoryPage">
+
+<img src="us2.jpg" class="memoryPhoto">
+
+<button id="memoriesBtn" class="nextBtn">
+See Our Memories ❤️
+</button>
 
 </div>
 
