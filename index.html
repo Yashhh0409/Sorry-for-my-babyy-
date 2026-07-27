@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>One More Chance ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+overflow:hidden;
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(-45deg,
+#ff9a9e,
+#fad0c4,
+#fad0c4,
+#fcb69f);
+
+background-size:400% 400%;
+
+animation:bg 12s infinite alternate;
+
+}
+
+@keyframes bg{
+
+0%{background-position:left;}
+100%{background-position:right;}
+
+}
+
+.card{
+
+width:90%;
+max-width:430px;
+
+padding:35px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(18px);
+
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+text-align:center;
+
+position:relative;
+
+z-index:5;
+
+}
+
+h1{
+
+color:white;
+
+font-size:34px;
+
+margin-bottom:15px;
+
+}
+
+p{
+
+color:white;
+
+font-size:17px;
+
+line-height:30px;
+
+margin-bottom:30px;
+
+}
+
+button{
+
+padding:15px 30px;
+
+border:none;
+
+border-radius:40px;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+margin:10px;
+
+}
+
+#yes{
+
+background:#ff4d6d;
+
+color:white;
+
+box-shadow:0 0 20px #ff4d6d;
+
+}
+
+#yes:hover{
+
+transform:scale(1.08);
+
+}
+
+#no{
+
+background:white;
+
+color:#ff4d6d;
+
+font-weight:bold;
+
+}
+
+.heart{
+
+position:absolute;
+
+color:#ff2d55;
+
+animation:fall linear infinite;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(-100px);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(110vh);
+
+opacity:0;
+
+}
+
+}
+
+#message{
+
+font-size:22px;
+
+color:white;
+
+margin-top:25px;
+
+font-weight:bold;
+
+}
+
+#cry{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+display:none;
+
+}
+
+.emoji{
+
+position:absolute;
+
+font-size:35px;
+
+animation:cry 5s linear infinite;
+
+}
+
+@keyframes cry{
+
+0%{
+
+transform:translateY(-100px);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(120vh);
+
+opacity:0;
+
+}
+
+}
+/* ===== CELEBRATION SCREEN ===== */
+
+.celebrate{
+
+width:90%;
+max-width:450px;
+
+padding:40px;
+
+text-align:center;
+
+background:rgba(255,255,255,.2);
+
+backdrop-filter:blur(20px);
+
+border-radius:30px;
+
+color:white;
+
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+animation:celebratePop 1s ease;
+
+}
+
+
+.celebrate h1{
+
+font-size:38px;
+
+margin-bottom:20px;
+
+}
+
+
+.celebrate h2{
+
+font-size:22px;
+
+margin-bottom:20px;
+
+}
+
+
+.celebrate p{
+
+font-size:18px;
+
+}
+
+
+.sticker{
+
+font-size:100px;
+
+margin-top:25px;
+
+animation:bounce 1.5s infinite;
+
+}
+
+
+@keyframes celebratePop{
+
+0%{
+
+transform:scale(.3);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+}
+/* ===== PREMIUM UI UPGRADE ===== */
+
+body::before{
+
+content:"❤️ ❤️ ❤️ ❤️ ❤️";
+
+position:absolute;
+
+top:-50px;
+
+left:0;
+
+width:100%;
+
+font-size:30px;
+
+word-spacing:80px;
+
+animation:heartRain 8s linear infinite;
+
+opacity:.7;
+
+z-index:1;
+
+}
+
+
+@keyframes heartRain{
+
+0%{
+
+transform:translateY(-100px);
+
+}
+
+100%{
+
+transform:translateY(110vh);
+
+}
+
+}
+
+
+.card{
+
+animation:pop .8s ease;
+
+border:1px solid rgba(255,255,255,.3);
+
+}
+
+
+@keyframes pop{
+
+0%{
+
+transform:scale(.5);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+
+button{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+button::after{
+
+content:"";
+
+position:absolute;
+
+width:0;
+
+height:0;
+
+background:white;
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+transition:.5s;
+
+}
+
+
+button:active::after{
+
+width:200px;
+
+height:200px;
+
+opacity:0;
+
+}
+
+
+#message{
+
+animation:fade .8s;
+
+}
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="cry"></div>
+
+<div class="card">
+
+<h1>🥺 One More Chance</h1>
+
+<p id="text">
+
+Before you leave...
+
+Please read this once...
+
+I know I made mistakes.
+
+I know I hurt you.
+
+But losing you is the biggest fear of my life.
+
+Please...
+
+Give me one last chance...
+
+❤️
+
+</p>
+
+<button id="yes">
+
+I Forgive You ❤️
+
+</button>
+
+<button id="no">
+
+No 😒
+
+</button>
+
+<div id="message"></div>
+
+</div>
+<script>
+const noBtn = document.getElementById("no");
+const yesBtn = document.getElementById("yes");
+const message = document.getElementById("message") 
+  
+// ===== NO BUTTON EMOTIONAL EFFECT =====
+
+const sadTexts = [
+"Maan jao please babyy 🥺❤️",
+"Ek aur chance de do 😭",
+"Mat jao please 💔",
+"Please mujhe maaf kar do 🥹",
+"I really need you ❤️"
+];
+
+let sadCount = 0;
+
+noBtn.addEventListener("click",()=>{
+
+if(sadCount < sadTexts.length){
+    noBtn.innerHTML = sadTexts[sadCount];
+}
+
+sadCount++;
+
+createCryEmoji();
+
+});
+
+
+// Sad sticker
+
+let sticker=document.createElement("div");
+
+sticker.innerHTML="🥺💔";
+
+sticker.style.position="fixed";
+sticker.style.bottom="30px";
+sticker.style.right="30px";
+sticker.style.fontSize="70px";
+
+document.body.appendChild(sticker);
+
+yesBtn.addEventListener("click", () => {
+
+document.body.innerHTML = `
+
+<div class="celebrate">
+
+<h1>
+🎉 YAYYYY BABYYY ❤️
+</h1>
+
+<h2>
+Thank You For Giving Me One More Chance 🥹💖
+</h2>
+
+<p>
+I promise I will always try to make you smile ❤️
+</p>
+
+<div class="sticker">
+🥰💖🎊
+</div>
+
+</div>
+
+`;
+
+document.body.style.overflow="hidden";
+
+startStars();
+
+});
+
+
+function startStars(){
+
+setInterval(()=>{
+
+let star=document.createElement("div");
+
+let emojis=[
+"⭐",
+"✨",
+"💖",
+"🎉",
+"❤️"
+];
+
+star.innerHTML =
+emojis[Math.floor(Math.random()*emojis.length)];
+
+star.style.position="fixed";
+star.style.left=Math.random()*100+"vw";
+star.style.top="-50px";
+star.style.fontSize="35px";
+star.style.zIndex="20";
+
+star.style.animation=
+"fall 4s linear";
+
+document.body.appendChild(star);
+
+
+setTimeout(()=>{
+
+star.remove();
+
+},4000);
+
+
+},150);
+
+}
+
+function createCryEmoji(){
+
+const e=document.createElement("div");
+
+e.innerHTML="😭";
+
+e.style.position="fixed";
+e.style.left=Math.random()*100+"vw";
+e.style.top="-40px";
+e.style.fontSize="35px";
+e.style.animation="fall 5s linear";
+
+document.body.appendChild(e);
+
+setTimeout(()=>e.remove(),5000);
+
+}
+
+function createStar(){
+
+const s=document.createElement("div");
+
+const arr=["⭐","✨","💖","🎉"];
+
+s.innerHTML=arr[Math.floor(Math.random()*arr.length)];
+
+s.style.position="fixed";
+s.style.left=Math.random()*100+"vw";
+s.style.top="-40px";
+s.style.fontSize="30px";
+s.style.animation="fall 4s linear";
+
+document.body.appendChild(s);
+
+setTimeout(()=>s.remove(),4000);
+
+}
+
+
+</script>
+
+</body>
+</html>
